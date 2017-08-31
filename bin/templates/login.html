@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head> 
+    <title>Index</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div>
+     <form th:action="@{/login}" method="post">
+         <table>
+			<tr>
+				<th colspan="2">
+					LOGIN ARMORY
+				</th>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					
+				</td>
+			</tr>
+			<tr>
+				<td align='right'>User<font color="red"> *</font></td>
+				<td>
+					<input name="username" title="Informe o nome de usu&aacute;rio" type="text" maxlength="11" size="20"></input>
+				</td>
+			</tr>
+			<tr>
+				<td>Password<font color="red"> *</font></td>
+				<td height="22"><input type="password" name="password" title="Informe a senha" maxlength="11" size="20" /></td>
+			</tr>
+			<tr>
+				<td height="19">
+					<input type="reset" value="Limpar" />
+				</td>
+				<td align='right' height="19">
+					<input type="submit" value="Entrar" />
+				</td>
+			</tr>
+		</table>
+     </form>
+    </div>
+    <div th:if="${param.error}">
+        Invalid username and password.
+    </div>
+    <div th:if="${param.logout}">
+        You have been logged out.
+    </div>
+</body>
+</html>
