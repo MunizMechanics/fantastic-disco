@@ -33,16 +33,16 @@
 	<thead>
 		<tr>
 			<h2>Graduações Cadastradas</h2>
-			<th th:text="ID">ID</th>
-			<th th:text="Nome">Name</th>
-			<th th:text="Sigla">Sigla</th>
+			<th th:text="idGraduacao">idGraduacao</th>
+			<th th:text="nomeGraduacao">nomeGraduacao</th>
+			<th th:text="siglaGraduacao">siglaGraduacao</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr th:each="grad: ${graduacoes}">
-			<td th:text="${grad.id}"></td>
-			<td th:text="${grad.nome}"></td>
-			<td th:text="${grad.sigla}"></td>
+			<td th:text="${grad.idGraduacao}"></td>
+			<td th:text="${grad.nomeGraduacao}"></td>
+			<td th:text="${grad.siglaGraduacao}"></td>
 		</tr>
 	</tbody>
 	</table>
