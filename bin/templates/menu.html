@@ -9,8 +9,27 @@
 <body>
 	<div>
 		<ul>
-			<li><a href='/inseregraduacao'><span>Inserir</span></a></li>
-			<li><a href="consultagraduacao.html" method="GET"><span>Consultar</span></a></li>
+			<li><a href='#'><span>Graduações</span></a>
+				<ul>
+					<li><a href='/inseregraduacao'><span>Inserir</span></a></li>
+					<li><a href="consultagraduacao.html" method="GET"><span>Consultar</span></a></li>
+				</ul>
+			</li>
+			
+			<li><a href='#'><span>Calibres</span></a>
+				<ul>
+					<li><a href='/inserecalibre'><span>Inserir</span></a></li>
+					<li><a href="consultacalibre.html" method="GET"><span>Consultar</span></a></li>
+				</ul>
+			</li>
+			
+			<li><a href='#'><span>Armas</span></a>
+				<ul>
+					<li><a href='/inserearma'><span>Inserir</span></a></li>
+					<li><a href="consultaarma.html" method="GET"><span>Consultar</span></a></li>
+				</ul>
+			</li>
+			
 			<li><a href='#'><span><h3 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h3></span></a></li>
 			<li><a href='#'><span><form th:action="@{/logout}" method="post"><input type="submit" value="Sign Out"/></form></span></a></li>
 		</ul>
