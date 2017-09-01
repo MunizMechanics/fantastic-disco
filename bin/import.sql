@@ -9,8 +9,9 @@ insert into Calibres values(1,'762');
 insert into Calibres values(2,'380');
 insert into Calibres values(3,'12');
 
-insert into Armas(idarma,calibre,nomearma) values(1, 1, 'Fuzil');
-insert into Armas(idarma,calibre,nomearma) values(2, 3, 'Carabina');
+insert into Armas(idarma,calibre,nomearma) values(1, 1, 'Fuzil213');
+insert into Armas(idarma,calibre,nomearma) values(2, 1, 'Fuzil214');
+insert into Armas(idarma,calibre,nomearma) values(3, 3, 'Carabina');
 
 insert into Militares(idmilitar, graduacao, nomemilitar) values(1, 5, 'Leivas');
 insert into Militares(idmilitar, graduacao, nomemilitar) values(2, 6, 'Muniz');

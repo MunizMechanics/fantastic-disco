@@ -94,7 +94,7 @@ public class Controllerzinho {
 	}
 	@GetMapping("/insereArma")
 	public String insereArma(Model model) {
-		model.addAttribute("armas",ar.findAll());
+		model.addAttribute("calibres", cr.findAll());
 		return "insereArma";
 	}
 	

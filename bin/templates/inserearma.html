@@ -38,9 +38,10 @@
 				<tr>
 					<th th:text="Calibre">nomeCalibre</th>
 					
-					<td th:each="arm: ${armas}">
+					<td>
 						<select>
-							<option th:text="${arm.calibre.nomeCalibre}"/>
+							<option th:each="cal: ${calibres}" th:text="${cal.nomeCalibre}"/>
+							
 						</select>
 					</td>
 				</tr>
