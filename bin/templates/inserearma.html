@@ -29,19 +29,22 @@
 	</head>
 	
 	<body>
-		<form th:action="@{/inserearma}" method="POST">
+		
+		<form th:action="@{/insereArma}" method="POST">
+			
 			<h1>Cadastro Armas</h1>
 			<table>
+				
 				<tr>
-					<th th:text="idCalibre">idCalibre</th>
-					<th th:text="nomeCalibre">nomeCalibre</th>
+					<th th:text="Calibre">nomeCalibre</th>
+					
+					<td th:each="arm: ${armas}">
+						<select>
+							<option th:text="${arm.calibre.nomeCalibre}"/>
+						</select>
+					</td>
 				</tr>
-				
-				<tr th:each="cal: ${calibres}">
-					<td th:text="${cal.idCalibre}"></td>
-					<td th:text="${cal.nomeCalibre}"></td>
-				</tr>
-				
+					
 				<tr>
 					<th th:text="Nome">Nome: </th>
 					<th>

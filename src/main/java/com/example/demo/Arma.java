@@ -32,8 +32,7 @@ public class Arma {
 		
 	}
 	
-	public Arma(int idArma, Calibre calibre, String nomeArma) {
-		this.idArma = idArma;
+	public Arma(Calibre calibre, String nomeArma) {
 		this.calibre = calibre;
 		this.nomeArma = nomeArma;
 	}

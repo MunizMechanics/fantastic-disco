@@ -32,12 +32,13 @@
 	<table class="table table-striped">
 	<thead>
 		<tr>
-			<h2>Armas Cadastrados</h2>
-			<th th:text="idArma">idArma</th>
-			<th th:text="nomeCalibre">nomeCalibre</th>
-			<th th:text="nomeArma">nomeArma</th>
+			<h2>Armas Cadastradas</h2>
+			<th th:text="ID">idArma</th>
+			<th th:text="Calibre">nomeCalibre</th>
+			<th th:text="Nome">nomeArma</th>
 		</tr>
 	</thead>
+	
 	<tbody>
 		<tr th:each="arm: ${armas}">
 			<td th:text="${arm.idArma}"></td>

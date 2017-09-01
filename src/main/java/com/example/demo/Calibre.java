@@ -1,6 +1,9 @@
 package com.example.demo;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -8,16 +11,17 @@ import javax.persistence.Table;
 @Table(name="Calibres")
 public class Calibre {
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "idcalibre")
 	private int idCalibre;
-	
+	@Column(name = "nomecalibre")
 	private String nomeCalibre;
 	
 	public Calibre() {
 		
 	}
 	
-	public Calibre(int idCalibre, String nomeCalibre) {
-		this.idCalibre = idCalibre;
+	public Calibre(String nomeCalibre) {
 		this.nomeCalibre = nomeCalibre;
 	}
 	

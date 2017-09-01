@@ -49,6 +49,7 @@ public class Controllerzinho {
 		return "consultaArma";
 	}
 	
+	//------------------------------------------------------------------------------
 	//CONSULTA MILITARES
 	@RequestMapping("/consultaMilitar")
 	public String consultarMilitar(Model model) {
@@ -59,8 +60,8 @@ public class Controllerzinho {
 	//------------------------------------------------------------------------------
 	//INSERIR GRADUACOES
 	@PostMapping("/insereGraduacao")
-	public String insereGraduacao(@RequestParam("idGraduacao") Integer idGraduacao, @RequestParam("nomeGraduacao") String nameGraduacao, @RequestParam("siglaGraduacao") String siglaGraduacao, Model model) {
-		Graduacao g = new Graduacao(idGraduacao, nameGraduacao, siglaGraduacao);
+	public String insereGraduacao(@RequestParam("nomeGraduacao") String nameGraduacao, @RequestParam("siglaGraduacao") String siglaGraduacao, Model model) {
+		Graduacao g = new Graduacao(nameGraduacao, siglaGraduacao);
 		gr.save(g);
 		return "insereGraduacao";
 	}
@@ -72,8 +73,8 @@ public class Controllerzinho {
 	//------------------------------------------------------------------------------
 	//INSERIR CALIBRES
 	@PostMapping("/insereCalibre")
-	public String insereCalibre(@RequestParam("idCalibre") Integer idCalibre, @RequestParam("nomeCalibre") String nomeCalibre, Model model) {
-		Calibre c = new Calibre(idCalibre, nomeCalibre);
+	public String insereCalibre(@RequestParam("nomeCalibre") String nomeCalibre, Model model) {
+		Calibre c = new Calibre(nomeCalibre);
 		cr.save(c);
 		return "insereCalibre";
 	}
@@ -85,14 +86,15 @@ public class Controllerzinho {
 	//------------------------------------------------------------------------------
 	//INSERIR ARMAS
 	@PostMapping("/insereArma")
-	public String insereArma(@RequestParam("idArma") Integer idArma, @RequestParam("idCalibre") Integer idCalibre, @RequestParam("nomeArma") String nomeArma, Model model) {
+	public String insereArma(@RequestParam("idCalibre") Integer idCalibre, @RequestParam("nomeArma") String nomeArma, Model model) {
 		Calibre x = cr.findOne(idCalibre);
-		Arma a = new Arma(idArma, x, nomeArma);
+		Arma a = new Arma(x, nomeArma);
 		ar.save(a);
 		return "insereArma";
 	}
 	@GetMapping("/insereArma")
-	public String insereArma() {
+	public String insereArma(Model model) {
+		model.addAttribute("armas",ar.findAll());
 		return "insereArma";
 	}
 	
