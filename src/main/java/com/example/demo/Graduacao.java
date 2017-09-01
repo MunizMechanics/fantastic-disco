@@ -18,11 +18,19 @@ public class Graduacao {
 	
 	public Graduacao(int idGraduacao, String nomeGraduacao, String siglaGraduacao) {
 		this.idGraduacao = idGraduacao;
-		this.setNomeGraduacao(nomeGraduacao);
-		this.setSiglaGraduacao(siglaGraduacao);	
+		this.nomeGraduacao = nomeGraduacao;
+		this.siglaGraduacao = siglaGraduacao;	
 	}
 	
 	//GETs e SETs
+	public int getIdGraduacao() {
+		return idGraduacao;
+	}
+	
+	public void setIdGraduacao(int idGraduacao) {
+		this.idGraduacao = idGraduacao;
+	}
+	
 	public String getNomeGraduacao() {
 		return nomeGraduacao;
 	}

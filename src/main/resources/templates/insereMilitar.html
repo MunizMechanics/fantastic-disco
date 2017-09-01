@@ -24,28 +24,34 @@
 	crossorigin="anonymous">
 </script>
 
-	<title>Cadastro Armas</title> 
+	<title>Cadastro Calibre</title> 
 	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	</head>
 	
 	<body>
-		<form th:action="@{/inserearma}" method="POST">
-			<h1>Cadastro Armas</h1>
+		<form th:action="@{/insereMilitar}" method="POST">
+			<h1>Cadastro Militar</h1>
 			<table>
 				<tr>
-					<th th:text="idCalibre">idCalibre</th>
-					<th th:text="nomeCalibre">nomeCalibre</th>
+					<th th:text="ID">ID: </th>
+					<th>
+						<input type="text" name="idMilitar" maxlength="10" size="10"></input>
+					</th>					
 				</tr>
 				
-				<tr th:each="cal: ${calibres}">
-					<td th:text="${cal.idCalibre}"></td>
-					<td th:text="${cal.nomeCalibre}"></td>
+				<tr>
+					<th th:text="Graduacao">Graduação: </th>
+					<th>
+						<select>
+							<option>Teste</option>
+						</select>
+					</th>					
 				</tr>
 				
 				<tr>
 					<th th:text="Nome">Nome: </th>
 					<th>
-						<input type="text" name="nomeArma" maxlength="10" size="10" style="margin-top:5px"></input>
+						<input type="text" name="nomeMilitar" maxlength="10" size="10" style="margin-top:5px"></input>
 					</th>					
 				</tr>
 				
@@ -58,7 +64,8 @@
 						<a href="/menu">
 							<input type="button" value="Voltar" class="btn btn-success" style="margin-top:15px"></input>						
 						</a>
-					</th>					
+					</th>
+										
 				</tr>
 			</table>
 		</form>

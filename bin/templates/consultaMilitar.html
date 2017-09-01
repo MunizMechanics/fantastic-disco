@@ -32,17 +32,17 @@
 	<table class="table table-striped">
 	<thead>
 		<tr>
-			<h2>Graduações Cadastradas</h2>
-			<th th:text="idGraduacao">idGraduacao</th>
-			<th th:text="nomeGraduacao">nomeGraduacao</th>
-			<th th:text="siglaGraduacao">siglaGraduacao</th>
+			<h2>Militares Cadastrados</h2>
+			<th th:text="idMilitar">ID</th>
+			<th th:text="Graduacao">Graduacao</th>
+			<th th:text="nomeMilitar">Nome</th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr th:each="grad: ${graduacoes}">
-			<td th:text="${grad.idGraduacao}"></td>
-			<td th:text="${grad.nomeGraduacao}"></td>
-			<td th:text="${grad.siglaGraduacao}"></td>
+		<tr th:each="mil: ${militares}">
+			<td th:text="${mil.idMilitar}"></td>
+			<td th:text="${mil.graduacao.siglaGraduacao}"></td>
+			<td th:text="${mil.nomeMilitar}"></td>
 		</tr>
 	</tbody>
 	</table>

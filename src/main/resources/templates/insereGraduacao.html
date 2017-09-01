@@ -21,31 +21,34 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-	crossorigin="anonymous">
-</script>
+	crossorigin="anonymous"></script>
 
-	<title>Cadastro Armas</title> 
+<title>Getting Started: Serving Web Content</title> 
 	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	</head>
 	
 	<body>
-		<form th:action="@{/inserearma}" method="POST">
-			<h1>Cadastro Armas</h1>
+		<form th:action="@{/inseregraduacao}" method="POST">
+			<h1>Cadastro Graduação</h1>
 			<table>
 				<tr>
-					<th th:text="idCalibre">idCalibre</th>
-					<th th:text="nomeCalibre">nomeCalibre</th>
-				</tr>
-				
-				<tr th:each="cal: ${calibres}">
-					<td th:text="${cal.idCalibre}"></td>
-					<td th:text="${cal.nomeCalibre}"></td>
+					<th th:text="ID">ID: </th>
+					<th>
+						<input type="text" name="idGraduacao" maxlength="10" size="10"></input>
+					</th>					
 				</tr>
 				
 				<tr>
 					<th th:text="Nome">Nome: </th>
 					<th>
-						<input type="text" name="nomeArma" maxlength="10" size="10" style="margin-top:5px"></input>
+						<input type="text" name="nomeGraduacao" maxlength="10" size="10" style="margin-top:5px"></input>
+					</th>					
+				</tr>
+				
+				<tr>
+					<th th:text="Sigla">Sigla: </th>
+					<th>
+						<input type="text" name="siglaGraduacao" maxlength="10" size="10" style="margin-top:5px"></input>
 					</th>					
 				</tr>
 				
@@ -58,7 +61,8 @@
 						<a href="/menu">
 							<input type="button" value="Voltar" class="btn btn-success" style="margin-top:15px"></input>						
 						</a>
-					</th>					
+					</th>
+										
 				</tr>
 			</table>
 		</form>

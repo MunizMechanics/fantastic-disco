@@ -32,17 +32,15 @@
 	<table class="table table-striped">
 	<thead>
 		<tr>
-			<h2>Graduações Cadastradas</h2>
-			<th th:text="idGraduacao">idGraduacao</th>
-			<th th:text="nomeGraduacao">nomeGraduacao</th>
-			<th th:text="siglaGraduacao">siglaGraduacao</th>
+			<h2>Calibres Cadastrados</h2>
+			<th th:text="idCalibre">idCalibre</th>
+			<th th:text="nomeCalibre">nomeCalibre</th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr th:each="grad: ${graduacoes}">
-			<td th:text="${grad.idGraduacao}"></td>
-			<td th:text="${grad.nomeGraduacao}"></td>
-			<td th:text="${grad.siglaGraduacao}"></td>
+		<tr th:each="cal: ${calibres}">
+			<td th:text="${cal.idCalibre}"></td>
+			<td th:text="${cal.nomeCalibre}"></td>
 		</tr>
 	</tbody>
 	</table>
