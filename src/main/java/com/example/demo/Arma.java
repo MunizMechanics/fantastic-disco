@@ -17,7 +17,7 @@ import javax.persistence.Table;
 @Table(name = "Armas")
 public class Arma {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "idarma")
 	private int idArma;
 	
@@ -55,5 +55,9 @@ public class Arma {
 	
 	public Calibre getCalibre() {
 		return this.calibre;
+	}
+
+	public void setCalibre(Calibre calibre) {
+		this.calibre = calibre;
 	}
 }

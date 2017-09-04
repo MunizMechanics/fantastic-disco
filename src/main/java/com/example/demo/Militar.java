@@ -17,7 +17,7 @@ import javax.persistence.Table;
 @Table(name = "Militares")
 public class Militar {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "idmilitar")
 	private int idMilitar;
 	
@@ -32,8 +32,7 @@ public class Militar {
 		
 	}
 	
-	public Militar(int idMilitar, Graduacao graduacao, String nomeMilitar) {
-		this.idMilitar = idMilitar;
+	public Militar(Graduacao graduacao, String nomeMilitar) {
 		this.graduacao = graduacao;
 		this.nomeMilitar = nomeMilitar;
 	}

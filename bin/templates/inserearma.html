@@ -37,11 +37,9 @@
 				
 				<tr>
 					<th th:text="Calibre">nomeCalibre</th>
-					
 					<td>
-						<select>
-							<option th:each="cal: ${calibres}" th:text="${cal.nomeCalibre}"/>
-							
+						<select name = "idCalibre">
+							<option  th:each="cal: ${calibres}" th:value="${cal.idCalibre}" th:text="${cal.nomeCalibre}"/>
 						</select>
 					</td>
 				</tr>

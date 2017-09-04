@@ -86,7 +86,7 @@ public class Controllerzinho {
 	//------------------------------------------------------------------------------
 	//INSERIR ARMAS
 	@PostMapping("/insereArma")
-	public String insereArma(@RequestParam("idCalibre") Integer idCalibre, @RequestParam("nomeArma") String nomeArma, Model model) {
+	public String insereArma(@RequestParam(value = "idCalibre", required = true) Integer idCalibre, @RequestParam(value = "nomeArma", required = true) String nomeArma, Model model) {
 		Calibre x = cr.findOne(idCalibre);
 		Arma a = new Arma(x, nomeArma);
 		ar.save(a);
@@ -101,14 +101,15 @@ public class Controllerzinho {
 	//------------------------------------------------------------------------------
 	//INSERIR MILITARES
 	@PostMapping("/insereMilitar")
-	public String insereMilitar(@RequestParam("idMilitar") Integer idMilitar, @RequestParam("idGraduacao") Integer idGraduacao, @RequestParam("nomeMilitar") String nomeMilitar, Model model) {
+	public String insereMilitar(@RequestParam("idGraduacao") Integer idGraduacao, @RequestParam("nomeMilitar") String nomeMilitar, Model model) {
 		Graduacao x = gr.findOne(idGraduacao);
-		Militar m = new Militar(idMilitar, x, nomeMilitar);
+		Militar m = new Militar(x, nomeMilitar);
 		mr.save(m);
 		return "insereMilitar";
 	}
 	@GetMapping("/insereMilitar")
-	public String insereMilitar() {
+	public String insereMilitar(Model model) {
+		model.addAttribute("graduacoes", gr.findAll());
 		return "insereMilitar";
 	}
 

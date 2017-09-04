@@ -33,19 +33,12 @@
 			<h1>Cadastro Militar</h1>
 			<table>
 				<tr>
-					<th th:text="ID">ID: </th>
-					<th>
-						<input type="text" name="idMilitar" maxlength="10" size="10"></input>
-					</th>					
-				</tr>
-				
-				<tr>
-					<th th:text="Graduacao">Graduação: </th>
-					<th>
-						<select>
-							<option>Teste</option>
+					<th th:text="Graduacao">nomeGraduacao</th>
+					<td>
+						<select name="idGraduacao">
+							<option th:each="grad: ${graduacoes}" th:value="${grad.idGraduacao}" th:text="${grad.siglaGraduacao}"/>
 						</select>
-					</th>					
+					</td>
 				</tr>
 				
 				<tr>

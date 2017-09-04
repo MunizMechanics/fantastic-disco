@@ -11,9 +11,9 @@ import javax.persistence.Table;
 @Table(name="Calibres")
 public class Calibre {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "idcalibre")
-	private int idCalibre;
+	private Integer idCalibre;
 	@Column(name = "nomecalibre")
 	private String nomeCalibre;
 	
