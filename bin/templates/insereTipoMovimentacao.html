@@ -23,28 +23,20 @@
 	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	crossorigin="anonymous"></script>
 
-		<title>Cadastro de Graduação</title> 
+		<title>Cadastro Tipo Movimentação</title> 
 	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	</head>
 	
 	<body>
-		<form th:action="@{/insereGraduacao}" method="POST">
-			<h1>Cadastro Graduação</h1>
+		<form th:action="@{/insereTipoMovimentacao}" method="POST">
+			<h1>Cadastro Tipo de Movimentação</h1>
 			<table>
 				<tr>
-					<th th:text="Nome ">Nome</th>
+					<th th:text="Nome ">Nome: </th>
 					<th>
-						<input type="text" name="nomeGraduacao" maxlength="10" size="10" style="margin-top:5px"></input>
+						<input type="text" name="nomeTipoMovimentacao" maxlength="10" size="10" style="margin-top:5px"></input>
 					</th>					
 				</tr>
-				
-				<tr>
-					<th th:text="Sigla">Sigla: </th>
-					<th>
-						<input type="text" name="siglaGraduacao" maxlength="10" size="10" style="margin-top:5px"></input>
-					</th>					
-				</tr>
-				
 				<tr>
 					<th>
 						<input type="submit" value="Salvar" class="btn btn-success" style="margin-top:15px"></input>

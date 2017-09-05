@@ -242,6 +242,20 @@
 				</ul>
 			</li>
 			
+			<li class='has-sub'><a href='#'><span>Tipo Movimentação</span></a>
+				<ul>
+					<li><a href='/insereTipoMovimentacao'><span>Inserir</span></a></li>
+					<li><a href="consultaTipoMovimentacao.html" method="GET"><span>Consultar</span></a></li>
+				</ul>
+			</li>
+			
+			<li class='has-sub'><a href='#'><span>Movimentações</span></a>
+				<ul>
+					<li><a href='/insereMovimentacao'><span>Inserir</span></a></li>
+					<li><a href="consultaMovimentacao.html" method="GET"><span>Consultar</span></a></li>
+				</ul>
+			</li>
+			
 			<li><a href='#'><span><div th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]!</div></span></a></li>
 			<li><a href='#'><span><div><form th:action="@{/logout}" method="post"><input type="submit" value="Logout" class="btn btn-success"/></form></div></span></a></li>
 		</ul>

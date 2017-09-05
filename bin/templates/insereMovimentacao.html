@@ -21,27 +21,48 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-	crossorigin="anonymous"></script>
+	crossorigin="anonymous">
+</script>
 
-		<title>Cadastro de Graduação</title> 
+	<title>Cadastro Movimentacao</title> 
 	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	</head>
 	
 	<body>
-		<form th:action="@{/insereGraduacao}" method="POST">
-			<h1>Cadastro Graduação</h1>
+		<form th:action="@{/insereMovimentacao}" method="POST">
+			<h1>Cadastro Movimentacao</h1>
 			<table>
 				<tr>
-					<th th:text="Nome ">Nome</th>
-					<th>
-						<input type="text" name="nomeGraduacao" maxlength="10" size="10" style="margin-top:5px"></input>
-					</th>					
+					<th th:text="TipoMovimentacao ">nomeTipoMovimentacao</th>
+					<td>
+						<select name="idTipoMovimentacao">
+							<option th:each="tipo: ${tipomovimentacoes}" th:value="${tipo.idTipoMovimentacao}" th:text="${tipo.nomeTipoMovimentacao}"/>
+						</select>
+					</td>
 				</tr>
 				
 				<tr>
-					<th th:text="Sigla">Sigla: </th>
+					<th th:text="Arma ">nomeArma</th>
+					<td>
+						<select name="idArma">
+							<option th:each="arm: ${armas}" th:value="${arm.idArma}" th:text="${arm.nomeArma}"/>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<th th:text="Militar ">nomeMilitar</th>
+					<td>
+						<select name="idMilitar">
+							<option th:each="mil: ${militares}" th:value="${mil.idMilitar}" th:text="${mil.nomeMilitar}"/>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<th th:text="Obs ">Observações: </th>
 					<th>
-						<input type="text" name="siglaGraduacao" maxlength="10" size="10" style="margin-top:5px"></input>
+						<input type="text" name="obsMovimentacao" maxlength="50" size="50" style="margin-top:5px"></input>
 					</th>					
 				</tr>
 				
