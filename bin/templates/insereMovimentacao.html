@@ -277,17 +277,17 @@
 			<div id="conteudo">
 				<form th:action="@{/insereMovimentacao}" method="POST">
 					<center>
-						<h1>Cadastro de Movimentações</h1>
+						<h1>Cadastrar Movimentação</h1>
 						<table>
 							<tr>
-								<th th:text="TipoMovimentacao ">nomeTipoMovimentacao</th>
+								<th th:text="TipoMovimentacao ">tipoMovimentacao</th>
 								<td>
 									<select name="idTipoMovimentacao">
-										<option th:each="tipo: ${tipomovimentacoes}" th:value="${tipo.idTipoMovimentacao}" th:text="${tipo.nomeTipoMovimentacao}"/>
+										<option th:each="tipo: ${tipoMovimentacoes}" th:value="${tipo.idTipoMovimentacao}" th:text="${tipo.nomeTipoMovimentacao}"/>
 									</select>
 								</td>
 							</tr>
-							
+						
 							<tr>
 								<th th:text="Arma ">nomeArma</th>
 								<td>
@@ -309,7 +309,7 @@
 							<tr>
 								<th th:text="Obs ">Observações: </th>
 								<th>
-									<input type="text" required="required" name="obsMovimentacao" maxlength="50" size="50" style="margin-top:5px"></input>
+									<input type="text" required="required" name="obsMovimentacao" maxlength="20" size="20" style="margin-top:5px"></input>
 								</th>					
 							</tr>
 							
